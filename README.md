@@ -15,6 +15,11 @@ Asegúrate de configurar correctamente la cadena de conexión en tu archivo `app
 dotnet ef dbcontext scaffold "Server=MASTERCHIS\SQLEXPRESS;Database=Kikis_DB;Integrated Security=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -o Data
 ```
 
+## Scaffolding de la base de datos (My SQL)
+```cmd
+dotnet ef dbcontext scaffold "server=LOCALHOST;port=0000;user=root;password=password;database=DB" Pomelo.EntityFrameworkCore.MySql -o Models --context TuDbContext --context-dir Context --use-database-names --no-onconfiguring --data-annotations
+```
+
 ## Generar token aleatorio (C#)
 ```cmd
 public static string GenerateRandomString(int length) {
